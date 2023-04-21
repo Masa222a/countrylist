@@ -1,4 +1,4 @@
-package com.example.okhttp.Controller.Fragment
+package com.example.okhttp.View.Fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

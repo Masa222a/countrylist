@@ -1,4 +1,4 @@
-package com.example.okhttp.Controller.Fragment
+package com.example.okhttp.View.Fragment
 
 import android.graphics.Color
 import android.os.Bundle
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.okhttp.Model.DetailManager
 import com.example.okhttp.Model.Entity.Flag
-import com.example.okhttp.View.DetailPagerAdapter
+import com.example.okhttp.adapter.DetailPagerAdapter
 import com.example.okhttp.databinding.FragmentDetailBinding
 import com.google.android.material.tabs.TabLayoutMediator
 

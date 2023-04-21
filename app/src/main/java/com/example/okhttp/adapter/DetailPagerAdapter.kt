@@ -1,12 +1,12 @@
-package com.example.okhttp.View
+package com.example.okhttp.adapter
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.okhttp.Controller.Fragment.DetailEmbassyFragment
-import com.example.okhttp.Controller.Fragment.DetailVisaFragment
+import com.example.okhttp.View.Fragment.DetailEmbassyFragment
+import com.example.okhttp.View.Fragment.DetailVisaFragment
 import com.example.okhttp.Model.Entity.Flag
 
 class DetailPagerAdapter(val flag: Flag, fragmentManager: FragmentManager, lifecycle: Lifecycle) :

@@ -1,4 +1,4 @@
-package com.example.okhttp.Controller.Fragment
+package com.example.okhttp.View.Fragment
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.okhttp.Model.Entity.Flag
 import com.example.okhttp.Model.ScrapingManager
 import com.example.okhttp.Model.XmlManager
-import com.example.okhttp.View.CountriesDetailEmbassyAdapter
+import com.example.okhttp.adapter.CountriesDetailEmbassyAdapter
 import com.example.okhttp.databinding.FragmentDetailEmbassyBinding
 import kotlinx.coroutines.*
 
