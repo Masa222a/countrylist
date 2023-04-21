@@ -1793,7 +1793,7 @@
         
         <country country_code="177" country_in_region_code="32">
             <name>中央アフリカ</name>
-            <flag>central6nrepublic</flag>
+            <flag>centralafricanrepublic</flag>
             <population>480万人</population>
             <language>サンゴ語/フランス語</language>
             <capital>バンギ</capital>
@@ -1923,7 +1923,7 @@
         
         <country country_code="190" country_in_region_code="45">
             <name>南アフリカ共和国</name>
-            <flag>south6</flag>
+            <flag>southafrica</flag>
             <population>5810万人</population>
             <language>英語/ アフリカーンス語</language>
             <capital>プレトリア</capital>
