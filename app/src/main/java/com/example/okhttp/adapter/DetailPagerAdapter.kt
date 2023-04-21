@@ -5,9 +5,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.okhttp.View.Fragment.DetailEmbassyFragment
-import com.example.okhttp.View.Fragment.DetailVisaFragment
-import com.example.okhttp.Model.Entity.Flag
+import com.example.okhttp.view.Fragment.DetailEmbassyFragment
+import com.example.okhttp.view.Fragment.DetailVisaFragment
+import com.example.okhttp.model.Entity.Flag
 
 class DetailPagerAdapter(val flag: Flag, fragmentManager: FragmentManager, lifecycle: Lifecycle) :
     FragmentStateAdapter(fragmentManager, lifecycle) {

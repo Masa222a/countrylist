@@ -1,7 +1,7 @@
-package com.example.okhttp.Model
+package com.example.okhttp.model
 
-import com.example.okhttp.Model.Entity.Flag
-import com.example.okhttp.Model.Entity.Visa
+import com.example.okhttp.model.Entity.Flag
+import com.example.okhttp.model.Entity.Visa
 import com.example.okhttp.R
 import com.example.okhttp.SingletonContext
 import org.xmlpull.v1.XmlPullParser

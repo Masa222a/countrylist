@@ -1,4 +1,4 @@
-package com.example.okhttp.Model.Entity
+package com.example.okhttp.model.Entity
 
 data class Visa(
     var id: Int,

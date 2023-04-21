@@ -1,4 +1,4 @@
-package com.example.okhttp.Model
+package com.example.okhttp.model
 
 import android.widget.ImageView
 import com.example.okhttp.SingletonContext

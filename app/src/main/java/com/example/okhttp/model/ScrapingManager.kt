@@ -1,7 +1,7 @@
-package com.example.okhttp.Model
+package com.example.okhttp.model
 
-import com.example.okhttp.Model.Entity.Embassy
-import com.example.okhttp.Model.Entity.Flag
+import com.example.okhttp.model.Entity.Embassy
+import com.example.okhttp.model.Entity.Flag
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.jsoup.Jsoup
