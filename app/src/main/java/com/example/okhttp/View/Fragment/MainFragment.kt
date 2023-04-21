@@ -1,4 +1,4 @@
-package com.example.okhttp.Controller.Fragment
+package com.example.okhttp.View.Fragment
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.okhttp.Model.Entity.Flag
 import com.example.okhttp.Model.XmlManager
 import com.example.okhttp.R
-import com.example.okhttp.View.CountriesListAdapter
+import com.example.okhttp.adapter.CountriesListAdapter
 import com.example.okhttp.databinding.FragmentMainBinding
 import com.google.android.material.tabs.TabLayout
 import org.xmlpull.v1.XmlPullParserException

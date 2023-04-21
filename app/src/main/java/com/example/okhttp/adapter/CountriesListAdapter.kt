@@ -1,4 +1,4 @@
-package com.example.okhttp.View
+package com.example.okhttp.adapter
 
 import android.view.LayoutInflater
 import android.view.View
