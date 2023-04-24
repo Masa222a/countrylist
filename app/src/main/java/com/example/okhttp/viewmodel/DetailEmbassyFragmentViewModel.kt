@@ -10,13 +10,13 @@ import com.example.okhttp.model.XmlManager
 import kotlinx.coroutines.launch
 
 class DetailEmbassyFragmentViewModel : ViewModel() {
-    var visaData = MutableLiveData<MutableList<Embassy>>()
+    var embassyData = MutableLiveData<MutableList<Embassy>>()
     private val scrapingManager = ScrapingManager()
 
     fun getEmbassyData(flag: Flag) {
         viewModelScope.launch {
             val url = ScrapingManager.UrlCreate(XmlManager.Region.indexOf(flag.region), flag).mainUrl
-            visaData.postValue(scrapingManager.fetchUrl(url))
+            embassyData.postValue(scrapingManager.fetchUrl(url))
         }
     }
 }
