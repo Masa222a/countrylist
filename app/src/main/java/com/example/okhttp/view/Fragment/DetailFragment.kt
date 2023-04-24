@@ -25,24 +25,25 @@ class DetailFragment : Fragment() {
 
         val flag = arguments?.getSerializable("country") as Flag
 
-        val tabLayout = binding.tabLayout
-        val viewPager = binding.detailViewPager
-        val adapter = DetailPagerAdapter(flag, parentFragmentManager, lifecycle)
+        binding.apply {
+            val adapter = DetailPagerAdapter(flag, parentFragmentManager, lifecycle)
 
-        viewPager.adapter = adapter
-        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-            tab.text = tabTitleList[position]
-        }.attach()
+            detailViewPager.adapter = adapter
+            TabLayoutMediator(tabLayout, detailViewPager) { tab, position ->
+                tab.text = tabTitleList[position]
+            }.attach()
 
-        binding.backButton.setOnClickListener {
-            requireActivity().onBackPressed()
+            backButton.setOnClickListener {
+                requireActivity().onBackPressed()
+            }
+
+            collapsingToolBar.let {
+                it.title = flag.name
+                it.setCollapsedTitleTextColor(Color.WHITE)
+                it.setExpandedTitleColor(Color.WHITE)
+                detailManager.setPhoto(eachCountryPhoto, flag.engName)
+            }
         }
-
-        val collapsingToolBar = binding.collapsingToolBar
-        collapsingToolBar.title = flag.name
-        collapsingToolBar.setCollapsedTitleTextColor(Color.WHITE)
-        collapsingToolBar.setExpandedTitleColor(Color.WHITE)
-        detailManager.setPhoto(binding.eachCountryPhoto, flag.engName)
 
         return binding.root
     }

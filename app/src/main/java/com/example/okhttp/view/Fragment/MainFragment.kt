@@ -35,31 +35,31 @@ class MainFragment : Fragment() {
         setupObserve()
 
         adapter = CountriesListAdapter(flagList)
-        val recyclerView = binding.recyclerView
-        val tab = binding.tabLayout
-        recyclerView.layoutManager = LinearLayoutManager(view?.context)
-        recyclerView.adapter = adapter
+        binding.apply {
+            recyclerView.layoutManager = LinearLayoutManager(view?.context)
+            recyclerView.adapter = adapter
 
-        tab.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                if (tab != null) {
-                    viewModel.getFlagList(XmlManager.Region.indexOf(tab.position))
-                    adapter?.flagList = viewModel.flagList.value!!
+            tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+                override fun onTabSelected(tab: TabLayout.Tab?) {
+                    if (tab != null) {
+                        viewModel.getFlagList(XmlManager.Region.indexOf(tab.position))
+                        adapter?.flagList = viewModel.flagList.value!!
 
-                    recyclerView.scrollToPosition(0)
-                    adapter?.notifyDataSetChanged()
+                        recyclerView.scrollToPosition(0)
+                        adapter?.notifyDataSetChanged()
+                    }
                 }
-            }
 
-            override fun onTabUnselected(tab: TabLayout.Tab?) {
-                recyclerView.scrollToPosition(0)
-            }
+                override fun onTabUnselected(tab: TabLayout.Tab?) {
+                    recyclerView.scrollToPosition(0)
+                }
 
-            override fun onTabReselected(tab: TabLayout.Tab?) {
-                recyclerView.scrollToPosition(0)
-            }
+                override fun onTabReselected(tab: TabLayout.Tab?) {
+                    recyclerView.scrollToPosition(0)
+                }
 
-        })
+            })
+        }
 
         adapter!!.setOnCountryClickListener(
             object : CountriesListAdapter.OnCountryCellClickListener {
