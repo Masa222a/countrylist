@@ -5,13 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.okhttp.model.Entity.Flag
-import com.example.okhttp.model.XmlManager
+import androidx.fragment.app.viewModels
 import com.example.okhttp.databinding.FragmentDetailVisaBinding
+import com.example.okhttp.model.Entity.Flag
+import com.example.okhttp.viewmodel.DetailVisaFragmentViewModel
 
 class DetailVisaFragment : Fragment() {
     lateinit var binding: FragmentDetailVisaBinding
-    var xmlManager = XmlManager()
+    private val viewModel: DetailVisaFragmentViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -19,9 +20,11 @@ class DetailVisaFragment : Fragment() {
     ): View? {
         binding = FragmentDetailVisaBinding.inflate(inflater, container, false)
         val flag = arguments?.getSerializable("flag") as Flag
-        val data = xmlManager.changeVisaList(flag.id)
+        viewModel.getVisaData(flag.id)
 
-        binding.visaInfomation.text = data[0].content.replace(" +".toRegex(), "\n")
+        viewModel.visaData.observe(viewLifecycleOwner) {
+            binding.visaInfomation.text = it
+        }
 
         return binding.root
     }
