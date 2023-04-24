@@ -6,7 +6,7 @@ import com.example.okhttp.model.XmlManager
 
 class DetailVisaFragmentViewModel : ViewModel() {
     var visaData = MutableLiveData<String>()
-    var xmlManager = XmlManager()
+    private val xmlManager = XmlManager()
 
     fun getVisaData(id: Int) {
         val data = xmlManager.changeVisaList(id)
