@@ -10,7 +10,6 @@ class DetailVisaFragmentViewModel : ViewModel() {
 
     fun getVisaData(id: Int) {
         val data = xmlManager.changeVisaList(id)
-        data[0].content.replace(" +".toRegex(), "\n")
         visaData.postValue(data[0].content.replace(" +".toRegex(), "\n"))
     }
 }
