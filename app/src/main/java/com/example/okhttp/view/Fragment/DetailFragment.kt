@@ -34,7 +34,7 @@ class DetailFragment : Fragment() {
             }.attach()
 
             backButton.setOnClickListener {
-                requireActivity().onBackPressed()
+                requireActivity().supportFragmentManager.popBackStack()
             }
 
             collapsingToolBar.let {

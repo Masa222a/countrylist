@@ -7,7 +7,8 @@ import com.example.okhttp.model.XmlManager
 
 class MainFragmentViewModel : ViewModel() {
     var flagList = MutableLiveData(listOf<Flag>())
-    var xmlManager = XmlManager()
+    val xmlManager = XmlManager()
+    var tabPosition = MutableLiveData<Int>()
 
     fun getFlagList(region: XmlManager.Region) {
         flagList.postValue(xmlManager.changeCountriesList(region))
