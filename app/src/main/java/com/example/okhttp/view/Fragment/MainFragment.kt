@@ -2,22 +2,19 @@ package com.example.okhttp.view.Fragment
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.okhttp.model.Entity.Flag
-import com.example.okhttp.model.XmlManager
 import com.example.okhttp.R
 import com.example.okhttp.adapter.CountriesListAdapter
 import com.example.okhttp.databinding.FragmentMainBinding
+import com.example.okhttp.model.Entity.Flag
+import com.example.okhttp.model.XmlManager
 import com.example.okhttp.viewmodel.MainFragmentViewModel
 import com.google.android.material.tabs.TabLayout
-import org.xmlpull.v1.XmlPullParserException
-import java.io.IOException
 
 class MainFragment : Fragment() {
     private lateinit var binding: FragmentMainBinding
@@ -44,6 +41,7 @@ class MainFragment : Fragment() {
                     if (tab != null) {
                         viewModel.getFlagList(XmlManager.Region.indexOf(tab.position))
                         adapter?.flagList = viewModel.flagList.value!!
+                        viewModel.tabPosition.postValue(tab.position)
 
                         recyclerView.scrollToPosition(0)
                         adapter?.notifyDataSetChanged()
@@ -78,6 +76,14 @@ class MainFragment : Fragment() {
         )
 
         return binding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        viewModel.tabPosition.observe(viewLifecycleOwner) {
+            binding.tabLayout.getTabAt(it)?.select()
+        }
     }
 
     private fun setupObserve() {
