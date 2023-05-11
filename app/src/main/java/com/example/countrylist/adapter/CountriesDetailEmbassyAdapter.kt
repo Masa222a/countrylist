@@ -1,11 +1,11 @@
-package com.example.okhttp.adapter
+package com.example.countrylist.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.okhttp.model.Entity.Embassy
+import com.example.countrylist.model.Entity.Embassy
 import com.example.okhttp.R
 
 class CountriesDetailEmbassyAdapter(var embassyList: MutableList<Embassy> = mutableListOf())

@@ -1,4 +1,4 @@
-package com.example.okhttp.view.Fragment
+package com.example.countrylist.view.Fragment
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -8,12 +8,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.okhttp.adapter.CountriesDetailEmbassyAdapter
+import com.example.countrylist.adapter.CountriesDetailEmbassyAdapter
+import com.example.countrylist.model.Entity.Embassy
+import com.example.countrylist.model.Entity.Flag
+import com.example.countrylist.model.ScrapingManager
+import com.example.countrylist.viewmodel.DetailEmbassyFragmentViewModel
 import com.example.okhttp.databinding.FragmentDetailEmbassyBinding
-import com.example.okhttp.model.Entity.Embassy
-import com.example.okhttp.model.Entity.Flag
-import com.example.okhttp.model.ScrapingManager
-import com.example.okhttp.viewmodel.DetailEmbassyFragmentViewModel
 import kotlinx.coroutines.*
 
 class DetailEmbassyFragment : Fragment() {

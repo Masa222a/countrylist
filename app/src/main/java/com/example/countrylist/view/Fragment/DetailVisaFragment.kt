@@ -1,4 +1,4 @@
-package com.example.okhttp.view.Fragment
+package com.example.countrylist.view.Fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.example.countrylist.model.Entity.Flag
+import com.example.countrylist.viewmodel.DetailVisaFragmentViewModel
 import com.example.okhttp.databinding.FragmentDetailVisaBinding
-import com.example.okhttp.model.Entity.Flag
-import com.example.okhttp.viewmodel.DetailVisaFragmentViewModel
 
 class DetailVisaFragment : Fragment() {
     lateinit var binding: FragmentDetailVisaBinding

@@ -1,4 +1,4 @@
-package com.example.okhttp.view.Activity
+package com.example.countrylist.view.Activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

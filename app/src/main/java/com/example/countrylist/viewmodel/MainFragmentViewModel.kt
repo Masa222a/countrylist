@@ -1,9 +1,9 @@
-package com.example.okhttp.viewmodel
+package com.example.countrylist.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.okhttp.model.Entity.Flag
-import com.example.okhttp.model.XmlManager
+import com.example.countrylist.model.Entity.Flag
+import com.example.countrylist.model.XmlManager
 
 class MainFragmentViewModel : ViewModel() {
     var flagList = MutableLiveData(listOf<Flag>())

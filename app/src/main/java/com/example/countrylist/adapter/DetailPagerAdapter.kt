@@ -1,13 +1,13 @@
-package com.example.okhttp.adapter
+package com.example.countrylist.adapter
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.okhttp.view.Fragment.DetailEmbassyFragment
-import com.example.okhttp.view.Fragment.DetailVisaFragment
-import com.example.okhttp.model.Entity.Flag
+import com.example.countrylist.view.Fragment.DetailEmbassyFragment
+import com.example.countrylist.view.Fragment.DetailVisaFragment
+import com.example.countrylist.model.Entity.Flag
 
 class DetailPagerAdapter(val flag: Flag, fragmentManager: FragmentManager, lifecycle: Lifecycle) :
     FragmentStateAdapter(fragmentManager, lifecycle) {

@@ -1,9 +1,9 @@
-package com.example.okhttp.model
+package com.example.countrylist.model
 
+import com.example.countrylist.SingletonContext
+import com.example.countrylist.model.Entity.Flag
+import com.example.countrylist.model.Entity.Visa
 import com.example.okhttp.R
-import com.example.okhttp.SingletonContext
-import com.example.okhttp.model.Entity.Flag
-import com.example.okhttp.model.Entity.Visa
 import org.xmlpull.v1.XmlPullParser
 
 class XmlManager {

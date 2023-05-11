@@ -1,4 +1,4 @@
-package com.example.okhttp.view.Fragment
+package com.example.countrylist.view.Fragment
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -8,12 +8,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.countrylist.adapter.CountriesListAdapter
+import com.example.countrylist.model.Entity.Flag
+import com.example.countrylist.model.XmlManager
+import com.example.countrylist.viewmodel.MainFragmentViewModel
 import com.example.okhttp.R
-import com.example.okhttp.adapter.CountriesListAdapter
 import com.example.okhttp.databinding.FragmentMainBinding
-import com.example.okhttp.model.Entity.Flag
-import com.example.okhttp.model.XmlManager
-import com.example.okhttp.viewmodel.MainFragmentViewModel
 import com.google.android.material.tabs.TabLayout
 
 class MainFragment : Fragment() {

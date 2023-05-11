@@ -1,12 +1,12 @@
-package com.example.okhttp.viewmodel
+package com.example.countrylist.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.okhttp.model.Entity.Embassy
-import com.example.okhttp.model.Entity.Flag
-import com.example.okhttp.model.ScrapingManager
-import com.example.okhttp.model.XmlManager
+import com.example.countrylist.model.Entity.Embassy
+import com.example.countrylist.model.Entity.Flag
+import com.example.countrylist.model.ScrapingManager
+import com.example.countrylist.model.XmlManager
 import kotlinx.coroutines.launch
 
 class DetailEmbassyFragmentViewModel : ViewModel() {

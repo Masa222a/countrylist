@@ -1,4 +1,4 @@
-package com.example.okhttp.model.Entity
+package com.example.countrylist.model.Entity
 
 import java.io.Serializable
 

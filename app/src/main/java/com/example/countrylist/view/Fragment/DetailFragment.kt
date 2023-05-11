@@ -1,4 +1,4 @@
-package com.example.okhttp.view.Fragment
+package com.example.countrylist.view.Fragment
 
 import android.graphics.Color
 import android.os.Bundle
@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.okhttp.model.DetailManager
-import com.example.okhttp.model.Entity.Flag
-import com.example.okhttp.adapter.DetailPagerAdapter
+import com.example.countrylist.adapter.DetailPagerAdapter
+import com.example.countrylist.model.DetailManager
+import com.example.countrylist.model.Entity.Flag
 import com.example.okhttp.databinding.FragmentDetailBinding
 import com.google.android.material.tabs.TabLayoutMediator
 

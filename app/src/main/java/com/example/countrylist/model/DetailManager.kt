@@ -1,7 +1,7 @@
-package com.example.okhttp.model
+package com.example.countrylist.model
 
 import android.widget.ImageView
-import com.example.okhttp.SingletonContext
+import com.example.countrylist.SingletonContext
 
 class DetailManager {
     private val context = SingletonContext.applicationContext()!!
